@@ -173,9 +173,12 @@ nav {
   margin: 0 auto;
   flex: 1;
   display: flex;
-  padding-top: 5rem;
+  padding-top: 4rem;
   @include lg {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+  @include md {
+    padding-top: 2rem;
   }
   @include sm {
     max-width: 90%;
