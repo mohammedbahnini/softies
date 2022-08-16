@@ -1,0 +1,85 @@
+@use "mixins" as *;
+
+footer {
+  background-color: rgb(26, 37, 47);
+  color: white;
+  padding: 5rem 0;
+  ul,
+  p {
+    font-weight: 200;
+    font-size: 0.8rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    @include sm {
+      gap: 0.75rem;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      span {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .title {
+    color: rgb(255, 165, 0);
+    text-decoration: underline;
+    margin-bottom: 1rem;
+  }
+  .footer-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 8rem;
+    @include sm {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      flex: 2;
+      .logo {
+        color: rgb(255, 165, 0);
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+        font-style: italic;
+        flex-grow: 0;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        @include sm {
+          margin-bottom: 0.5rem;
+        }
+        span {
+          color: rgb(58, 91, 160);
+        }
+      }
+      p {
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .contact,
+  .services {
+    flex: 1;
+  }
+
+  .services {
+    ul {
+      li a {
+        transition: 0.3s ease-out;
+        &:hover {
+          color: rgb(255, 165, 0);
+        }
+      }
+    }
+  }
+}

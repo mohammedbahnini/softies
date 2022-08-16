@@ -1,0 +1,75 @@
+@use "../partials/mixins" as *;
+
+.avantages {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @include sm {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  background-color: rgba(grey, 0.1);
+  text-align: center;
+  .title {
+    font-size: 3.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 7rem;
+    @include sm {
+      font-size: 2rem;
+      margin-bottom: 4rem;
+    }
+  }
+  .avantages-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 5rem;
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+    .avantage {
+      background-color: white;
+      padding: 2rem 0;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px 1px rgba(black, 0.1);
+      font-size: 1.5rem;
+      position: relative;
+      transition: 0.5s ease-out;
+      z-index: 0;
+      overflow: hidden;
+      opacity: 0;
+      @include xlg {
+        font-size: 1.125rem;
+      }
+      @include sm {
+        font-size: 1.05rem;
+      }
+      &:nth-child(odd) {
+        transform: translateX(-20px);
+      }
+      &:nth-child(even) {
+        transform: translateX(20px);
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        z-index: -1;
+        transition: 0.2s ease-out;
+        background-color: rgb(255, 165, 0);
+      }
+      &:hover {
+        color: white;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

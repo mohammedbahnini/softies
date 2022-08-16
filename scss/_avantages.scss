@@ -1,0 +1,44 @@
+.avantages {
+  padding: 7rem 0;
+  background-color: rgba(grey, 0.1);
+  text-align: center;
+  .title {
+    font-size: 3.5rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+  .avantages-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 5rem;
+    .avantage {
+      background-color: white;
+      padding: 2rem 0;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px 1px rgba(black, 0.1);
+      font-size: 1.5rem;
+      position: relative;
+      transition: 0.2s ease-out;
+      z-index: 0;
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        z-index: -1;
+        transition: 0.2s ease-out;
+        background-color: rgb(58, 91, 160);
+      }
+      &:hover {
+        color: white;
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

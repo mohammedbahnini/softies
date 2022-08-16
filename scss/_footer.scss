@@ -1,0 +1,32 @@
+footer {
+  background-color: rgb(26, 37, 47);
+  color: white;
+  padding: 5rem 0;
+  .footer-content {
+    .info {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      .logo {
+        color: rgb(255, 165, 0);
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: "Josefin Sans", sans-serif;
+        font-style: italic;
+        flex-grow: 0;
+        margin-right: 1rem;
+        margin-bottom: 0.5rem;
+        span {
+          color: rgb(58, 91, 160);
+        }
+      }
+      p {
+        flex: 1;
+        font-size: 0.8rem;
+        font-weight: 200;
+        letter-spacing: 0.5px;
+        line-height: 1.25;
+      }
+    }
+  }
+}

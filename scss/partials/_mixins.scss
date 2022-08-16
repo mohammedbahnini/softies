@@ -1,0 +1,43 @@
+@use "vars" as *;
+
+// mixin for extra small devices
+@mixin xs() {
+  @media screen and (max-width: $xs) {
+    @content;
+  }
+}
+
+// mixin for small devices
+@mixin sm() {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+// mixin for medium devices
+@mixin md() {
+  @media screen and (max-width: $md) {
+    @content;
+  }
+}
+
+// mixin for large devides
+@mixin lg() {
+  @media screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+// mixin for extra large devices
+@mixin xlg() {
+  @media screen and (max-width: $xlg) {
+    @content;
+  }
+}
+
+// custom mixin
+@mixin on($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

@@ -1,0 +1,9 @@
+#particle-canvas {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}

@@ -1,0 +1,61 @@
+@use "mixins" as *;
+
+#menu {
+  display: none;
+  @include sm {
+    display: flex;
+    position: fixed;
+    justify-content: end;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(black, 0.5);
+    z-index: 99;
+    left: 100%;
+    transition: 0.3s ease-out;
+    &.open {
+      left: 0;
+    }
+    > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      width: 80%;
+      height: 100%;
+      background-color: white;
+      padding-top: 4rem;
+      padding-left: 2rem;
+
+      li {
+        a {
+          color: rgba(black, 0.7);
+          font-size: 0.9rem;
+          i {
+            transition: 0.3s ease-out;
+          }
+        }
+        &.open {
+          > a {
+            color: rgb(255, 165, 0);
+            i {
+              transform: rotateZ(90deg);
+            }
+          }
+          > ul {
+            max-height: 100vh;
+          }
+        }
+        > ul {
+          max-height: 0;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          transition: 0.3s ease-out;
+          li {
+            padding: 1rem 1rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
