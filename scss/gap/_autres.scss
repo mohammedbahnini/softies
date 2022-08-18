@@ -1,0 +1,16 @@
+@use "../partials/mixins" as *;
+
+.autres {
+  padding-block: 7rem;
+  text-align: center;
+  background-color: rgba(grey, 0.1);
+  @include sm {
+    padding-block: 4rem;
+  }
+  .title {
+    color: rgb(255, 165, 0);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+}

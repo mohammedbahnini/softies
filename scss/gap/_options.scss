@@ -1,0 +1,34 @@
+@use "../partials/mixins" as *;
+
+.options {
+  padding-block: 7rem;
+  text-align: center;
+  @include sm {
+    padding-block: 4rem;
+  }
+  .title {
+    color: rgb(255, 165, 0);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  ul {
+    text-align: left;
+    li {
+      line-height: 1.5;
+      padding-left: 1.5rem;
+      &::before {
+        content: "";
+        width: 1rem;
+        aspect-ratio: 1;
+        display: block;
+        background-color: rgb(58, 91, 160);
+        position: absolute;
+        transform: translateX(-1.5rem);
+        border-radius: 50%;
+        display: block;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+}

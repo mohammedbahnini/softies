@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   position: relative;
+  color: rgb(87, 87, 87);
 }
 
 .container {
@@ -21,8 +22,26 @@ body {
 ul {
   list-style: none;
 }
+li {
+  line-height: 1.5;
+}
 
 a {
   color: white;
   text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.logo {
+  color: rgb(255, 165, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: italic;
+  span {
+    color: rgb(96, 130, 202);
+  }
 }

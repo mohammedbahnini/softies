@@ -104,10 +104,11 @@
       });
     }
     // Else check if valid image
-    else if ((/\.(gif|jpg|jpeg|tiff|png|webp)$/i).test(this.options.background)) {
+    else if ((/\.(gif|jpg|jpeg|tiff|png|webp|svg)$/i).test(this.options.background)) {
       this.setStyles(this.bgDiv, {
         'background': 'url("' + this.options.background + '") no-repeat center',
-        'background-size': 'cover'
+        'background-size': 'auto 120%' , 
+        'background-color' : 'rgb(57, 91, 100)'
       });
     }
     // Else throw error

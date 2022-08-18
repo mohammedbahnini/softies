@@ -29,8 +29,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>GO Soft | Commerciale</title>
-    <link rel="stylesheet" href="css/commerciale.css" />
+    <title>GO Soft | GAP</title>
+    <link rel="stylesheet" href="css/gap.css" />
   </head>
   <body>
     <div id="menu">
@@ -107,10 +107,9 @@
               <span class="bar"></span>
             </span>
           </nav>
-
           <div class="intro">
             <div class="intro-content">
-              <h1 class="title">GO Commerciale</h1>
+              <h1 class="title">GO GAP</h1>
             </div>
           </div>
         </div>
@@ -121,34 +120,27 @@
 
     <main>
       <section class="container definition">
-        <h2 class="title">C'est quoi Go Commerciale ?</h2>
+        <h2 class="title">C'est quoi Go GAP ?</h2>
         <p>
-          Enfin un logiciel puissant et souple pour piloter l’ensemble de votre
-          activité et qui s’adapte aux spécificités de votre entreprise :
-          gestion des achats, des ventes, des stocks, Gestion de la Relation
-          Client, transfert des écritures comptables soit vers notre logiciel de
-          gestion de comptabilité GO-Compta soit vers un outil tiers.
+          Un outil qui permet l'automatisation du Workflow du travail. C'est une
+          solution performante de suivi des projets.
         </p>
-        <p>
-          Grosse structure, petites entreprises, artisans et commerçants…votre
-          facturation en toute simplicité avec un logiciel prêt à l’emploi !
-        </p>
-        <p>
-          Go-Gestion Commerciale vous accompagne dans votre cycle commercial :
-          tous vos devis, factures, commandes, bons de livraisons sont réalisés
-          en 1 clic les uns à partir des autres.
-        </p>
-        <p>
-          Vous accédez rapidement à toutes vos statistiques et indicateurs clés
-          (Marge d’exploitation, chiffre d’affaires, factures à relancer…) pour
-          vous faciliter le travail et prendre les bonnes décisions en matière
-          de développement de votre activité.
-        </p>
+        <div class="points-forts">
+          <h3 class="title">Points forts :</h3>
+          <ul>
+            <li>Agenda</li>
+            <li>Statistiques.</li>
+            <li>Code Compilé.</li>
+            <li>Accès sécurisé.</li>
+            <li>Paramétrage Menus</li>
+            <li>Utilisation paramétré par droit.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="avantages">
         <div class="container">
-          <h2 class="title">Avantages du Go Commerciale</h2>
+          <h2 class="title">Avantages du Go GAP</h2>
           <div class="avantages-list">
             <div class="avantage">
               <h3 class="title">Gestion des Ventes</h3>
@@ -246,19 +238,60 @@
                 <li>Devis & Bon de commande Clients</li>
               </ul>
             </div>
+
+            <div class="avantage">
+              <h3 class="title">Gestion des Achats</h3>
+              <p></p>
+              <ul>
+                <li>Le suivi des règlements Fournisseurs .</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="container formation">
+      <section class="container options">
         <h4 class="title">
-          A chacun son organisation, à chacun sa formation !
+          La gestion des tâches est le noyau de la solution, via ce module nous
+          pouvons :
         </h4>
-        <p>
-          Formations intra-entreprises Une équipe est à votre disposition afin
-          de vous accompagner dans votre formation et dans l’implémentation de
-          l’application afin de coller au plus juste à vos besoins.
-        </p>
+        <ul>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+          <li>Ajouter des tâches.</li>
+        </ul>
+      </section>
+
+      <section class="autres">
+        <div class="container">
+          <h4 class="title">Autres</h4>
+          <p>
+            Nous trouvons aussi La gestion de pointage et rapport pointage qui
+            donne les statistiques de pointage des salaries par choix de jour et
+            salarie si vous voulez,
+          </p>
+          <br />
+          <p>
+            La gestion des alertes qui vous donne la liberté totale de choisir
+            les couleurs que vous souhaite utilisé,
+          </p>
+          <br />
+          <p>
+            La gestion des Droits et Privilèges figure aussi dans la solution,
+            après la création des rôles vous pouvez affecter ces dernières aux
+            utilisateurs pour métriser les connexions de chaque un d’eux
+          </p>
+          <br />
+          <p>La gestion des opérateurs, modèles et pièces. Etc.</p>
+        </div>
       </section>
     </main>
 
@@ -321,7 +354,7 @@
     <script>
       const options = {
         particleColor: "#fff",
-        background: "assets/commerciale/web-page.svg",
+        background: "assets/gap/scrum-board.svg",
         interactive: true,
         speed: "fast",
         density: "medium",
@@ -330,53 +363,7 @@
         document.getElementById("particle-canvas"),
         options
       );
-
-      const introParagraph = document.querySelector(".intro p");
-      let text = introParagraph.textContent;
-      text = text.replace(/\s\s+/g, " ");
-      const letters = text.split("");
-      //console.log(letters);
-      introParagraph.textContent = "";
-      startTyping();
-
-      async function startTyping() {
-        for (let i = 0; i <= letters.length - 1; i++) {
-          //introParagraph.textContent += letters[i];
-          await addLetter(letters[i]);
-        }
-      }
-      function addLetter(letter) {
-        return new Promise(async (resolve) => {
-          setTimeout(() => {
-            introParagraph.textContent += letter;
-            //console.log(letter);
-            resolve();
-          }, 20);
-        });
-      }
     </script>
-
-    <script>
-      const obersver = new IntersectionObserver(
-        (entries) => {
-          for (entry of entries) {
-            //console.log(entry);
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          }
-        },
-        {
-          threshold: 0.75,
-        }
-      );
-
-      const avantages = document.querySelectorAll(".avantages .avantage");
-      for (avantage of avantages) {
-        obersver.observe(avantage);
-      }
-    </script>
-
     <script src="js/menu.js"></script>
     <script src="js/observers/avantages.js"></script>
   </body>

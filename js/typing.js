@@ -18,6 +18,6 @@ function addLetter(letter) {
       introParagraph.textContent += letter;
       //console.log(letter);
       resolve();
-    }, 20);
+    }, 25);
   });
 }

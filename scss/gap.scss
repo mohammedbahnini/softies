@@ -7,11 +7,13 @@
 
 @use "partials/header";
 
-@use "commerciale/definition";
+@use "gap/definition";
 
-@use "commerciale/avantages";
+@use "gap/avantages";
 
-@use "commerciale/formation";
+@use "gap/options";
+
+@use "gap/autres";
 
 @use "partials/footer";
 

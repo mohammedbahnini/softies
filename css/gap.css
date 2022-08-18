@@ -360,14 +360,14 @@ nav .menu-button {
   padding-top: 7rem;
   padding-bottom: 7rem;
 }
-.definition .title {
+.definition > .title {
   font-size: 3.5rem;
   font-family: "Josefin Sans", sans-serif;
   text-align: center;
   margin-bottom: 7rem;
 }
 @media screen and (max-width: 48rem) {
-  .definition .title {
+  .definition > .title {
     font-size: 2rem;
     margin-bottom: 4rem;
   }
@@ -379,6 +379,27 @@ nav .menu-button {
 }
 .definition p:not(:last-child) {
   margin-bottom: 1rem;
+}
+.definition .points-forts .title {
+  color: rgb(255, 165, 0);
+  margin-bottom: 0.75rem;
+}
+.definition .points-forts ul li {
+  line-height: 1.5;
+  padding-left: 1.5rem;
+}
+.definition .points-forts ul li::before {
+  content: "";
+  width: 1rem;
+  aspect-ratio: 1;
+  display: block;
+  background-color: rgb(58, 91, 160);
+  position: absolute;
+  -webkit-transform: translateX(-1.5rem);
+          transform: translateX(-1.5rem);
+  border-radius: 50%;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .avantages {
@@ -463,16 +484,53 @@ nav .menu-button {
   margin-top: 0.25rem;
 }
 
-.formation {
+.options {
   padding-block: 7rem;
   text-align: center;
 }
 @media screen and (max-width: 48rem) {
-  .formation {
+  .options {
     padding-block: 4rem;
   }
 }
-.formation .title {
+.options .title {
+  color: rgb(255, 165, 0);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+.options ul {
+  text-align: left;
+}
+.options ul li {
+  line-height: 1.5;
+  padding-left: 1.5rem;
+}
+.options ul li::before {
+  content: "";
+  width: 1rem;
+  aspect-ratio: 1;
+  display: block;
+  background-color: rgb(58, 91, 160);
+  position: absolute;
+  -webkit-transform: translateX(-1.5rem);
+          transform: translateX(-1.5rem);
+  border-radius: 50%;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.autres {
+  padding-block: 7rem;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.1);
+}
+@media screen and (max-width: 48rem) {
+  .autres {
+    padding-block: 4rem;
+  }
+}
+.autres .title {
   color: rgb(255, 165, 0);
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.25rem;
@@ -666,4 +724,4 @@ footer .services ul li a:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-/*# sourceMappingURL=commerciale.css.map */
+/*# sourceMappingURL=gap.css.map */

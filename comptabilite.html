@@ -29,8 +29,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>GO Soft | Commerciale</title>
-    <link rel="stylesheet" href="css/commerciale.css" />
+    <title>GO Soft | Comptabilité</title>
+    <link rel="stylesheet" href="css/comptabilite.css" />
   </head>
   <body>
     <div id="menu">
@@ -110,7 +110,7 @@
 
           <div class="intro">
             <div class="intro-content">
-              <h1 class="title">GO Commerciale</h1>
+              <h1 class="title">GO Comptabilité</h1>
             </div>
           </div>
         </div>
@@ -121,29 +121,23 @@
 
     <main>
       <section class="container definition">
-        <h2 class="title">C'est quoi Go Commerciale ?</h2>
+        <h2 class="title">C'est quoi Go Comptabilité ?</h2>
         <p>
-          Enfin un logiciel puissant et souple pour piloter l’ensemble de votre
-          activité et qui s’adapte aux spécificités de votre entreprise :
-          gestion des achats, des ventes, des stocks, Gestion de la Relation
-          Client, transfert des écritures comptables soit vers notre logiciel de
-          gestion de comptabilité GO-Compta soit vers un outil tiers.
+          La Gestion Comptabileté est une solution puissante et complète capable
+          de satisfaire l'ensemble de vos besoins en matière de comptabilité
+          générale, suivi des immobilisations, Gestion de trésorerie et édition
+          des laisses fiscales.
         </p>
-        <p>
-          Grosse structure, petites entreprises, artisans et commerçants…votre
-          facturation en toute simplicité avec un logiciel prêt à l’emploi !
-        </p>
-        <p>
-          Go-Gestion Commerciale vous accompagne dans votre cycle commercial :
-          tous vos devis, factures, commandes, bons de livraisons sont réalisés
-          en 1 clic les uns à partir des autres.
-        </p>
-        <p>
-          Vous accédez rapidement à toutes vos statistiques et indicateurs clés
-          (Marge d’exploitation, chiffre d’affaires, factures à relancer…) pour
-          vous faciliter le travail et prendre les bonnes décisions en matière
-          de développement de votre activité.
-        </p>
+        <div class="points-forts">
+          <h3 class="title">Points forts :</h3>
+          <ul>
+            <li>Accès sécurisé.</li>
+            <li>Utilisation paramétré par droit.</li>
+            <li>Déclaration TVA.</li>
+            <li>Bilan.</li>
+            <li>Liasse fiscale</li>
+          </ul>
+        </div>
       </section>
 
       <section class="avantages">
@@ -246,18 +240,30 @@
                 <li>Devis & Bon de commande Clients</li>
               </ul>
             </div>
+
+            <div class="avantage">
+              <h3 class="title">Gestion des Achats</h3>
+              <p></p>
+              <ul>
+                <li>Le suivi des règlements Fournisseurs .</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="container formation">
-        <h4 class="title">
-          A chacun son organisation, à chacun sa formation !
-        </h4>
+      <section class="container parametrage">
+        <h4 class="title">Paramètrage</h4>
         <p>
-          Formations intra-entreprises Une équipe est à votre disposition afin
-          de vous accompagner dans votre formation et dans l’implémentation de
-          l’application afin de coller au plus juste à vos besoins.
+          La solution « Go Comptabilité » vous donne aussi d’autres
+          fonctionnalités comme : la gestion des Immobilisations, le
+          Rapprochement bancaire, la Balance âgé, le Report à nouveau,
+          paramétrage du nombre de chiffre pour un code compte, Etat T.V.A
+          mensuelle et trimestrielle, Is simplifiée.
         </p>
       </section>
     </main>
@@ -321,7 +327,7 @@
     <script>
       const options = {
         particleColor: "#fff",
-        background: "assets/commerciale/web-page.svg",
+        background: "assets/comptabilite/audit.svg",
         interactive: true,
         speed: "fast",
         density: "medium",
@@ -330,51 +336,6 @@
         document.getElementById("particle-canvas"),
         options
       );
-
-      const introParagraph = document.querySelector(".intro p");
-      let text = introParagraph.textContent;
-      text = text.replace(/\s\s+/g, " ");
-      const letters = text.split("");
-      //console.log(letters);
-      introParagraph.textContent = "";
-      startTyping();
-
-      async function startTyping() {
-        for (let i = 0; i <= letters.length - 1; i++) {
-          //introParagraph.textContent += letters[i];
-          await addLetter(letters[i]);
-        }
-      }
-      function addLetter(letter) {
-        return new Promise(async (resolve) => {
-          setTimeout(() => {
-            introParagraph.textContent += letter;
-            //console.log(letter);
-            resolve();
-          }, 20);
-        });
-      }
-    </script>
-
-    <script>
-      const obersver = new IntersectionObserver(
-        (entries) => {
-          for (entry of entries) {
-            //console.log(entry);
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          }
-        },
-        {
-          threshold: 0.75,
-        }
-      );
-
-      const avantages = document.querySelectorAll(".avantages .avantage");
-      for (avantage of avantages) {
-        obersver.observe(avantage);
-      }
     </script>
 
     <script src="js/menu.js"></script>

@@ -29,8 +29,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>GO Soft | Commerciale</title>
-    <link rel="stylesheet" href="css/commerciale.css" />
+    <title>GoSoft | Paie</title>
+    <link rel="stylesheet" href="css/paie.css" />
   </head>
   <body>
     <div id="menu">
@@ -66,6 +66,7 @@
         </li>
       </ul>
     </div>
+
     <header>
       <div id="particle-canvas"></div>
       <!-- content inside the heade -->
@@ -110,7 +111,7 @@
 
           <div class="intro">
             <div class="intro-content">
-              <h1 class="title">GO Commerciale</h1>
+              <h1 class="title">GO Paie</h1>
             </div>
           </div>
         </div>
@@ -121,34 +122,32 @@
 
     <main>
       <section class="container definition">
-        <h2 class="title">C'est quoi Go Commerciale ?</h2>
+        <h2 class="title">C'est quoi Go Paie ?</h2>
         <p>
-          Enfin un logiciel puissant et souple pour piloter l’ensemble de votre
-          activité et qui s’adapte aux spécificités de votre entreprise :
-          gestion des achats, des ventes, des stocks, Gestion de la Relation
-          Client, transfert des écritures comptables soit vers notre logiciel de
-          gestion de comptabilité GO-Compta soit vers un outil tiers.
+          Convivial, modulaire, évolutif et entièrement paramétrable, telles
+          sont les richesses fonctionnelles du logiciel de la paie.
         </p>
-        <p>
-          Grosse structure, petites entreprises, artisans et commerçants…votre
-          facturation en toute simplicité avec un logiciel prêt à l’emploi !
-        </p>
-        <p>
-          Go-Gestion Commerciale vous accompagne dans votre cycle commercial :
-          tous vos devis, factures, commandes, bons de livraisons sont réalisés
-          en 1 clic les uns à partir des autres.
-        </p>
-        <p>
-          Vous accédez rapidement à toutes vos statistiques et indicateurs clés
-          (Marge d’exploitation, chiffre d’affaires, factures à relancer…) pour
-          vous faciliter le travail et prendre les bonnes décisions en matière
-          de développement de votre activité.
-        </p>
+        <div class="points-forts">
+          <h3 class="title">Points forts :</h3>
+          <ul>
+            <li>Accès sécurisé.</li>
+            <li>Utilisation paramétré par droit.</li>
+            <li>Traitement Mensuel et quinzaine.</li>
+            <li>
+              Paramétrage totale : Barèmes, plafonds, déductions, imposables,
+              etc.
+            </li>
+            <li>
+              Génération automatique de plusieurs états : Etat 9421, journal de
+              paie, bordereau CNSS, etc.
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="avantages">
         <div class="container">
-          <h2 class="title">Avantages du Go Commerciale</h2>
+          <h2 class="title">Avantages du Go Paie</h2>
           <div class="avantages-list">
             <div class="avantage">
               <h3 class="title">Gestion des Ventes</h3>
@@ -246,18 +245,36 @@
                 <li>Devis & Bon de commande Clients</li>
               </ul>
             </div>
+
+            <div class="avantage">
+              <h3 class="title">Editions générales</h3>
+              <p>
+                La solution « Go PAIE » contient plusieurs états d’impressions,
+                nous citons :
+              </p>
+              <ul>
+                <li>Etat d’émargement</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+                <li>Devis & Bon de commande Clients</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="container formation">
-        <h4 class="title">
-          A chacun son organisation, à chacun sa formation !
-        </h4>
+      <section class="container parametrage">
+        <h4 class="title">Paramètrage</h4>
         <p>
-          Formations intra-entreprises Une équipe est à votre disposition afin
-          de vous accompagner dans votre formation et dans l’implémentation de
-          l’application afin de coller au plus juste à vos besoins.
+          Toute la solution est paramétrage pour suivre les changements de loi
+          de finance Marocaine et pour tout paramétrage personnel de la société.
+        </p>
+        <br />
+        <p>
+          La solution contient aussi la gestion des près et échéances, la
+          gestion des avances, la gestion des mois, la gestion des absences et
+          la gestion des congés.
         </p>
       </section>
     </main>
@@ -321,39 +338,15 @@
     <script>
       const options = {
         particleColor: "#fff",
-        background: "assets/commerciale/web-page.svg",
+        background: "assets/paie/investment.svg",
         interactive: true,
         speed: "fast",
-        density: "medium",
+        density: "small",
       };
       const particleCanvas = new ParticleNetwork(
         document.getElementById("particle-canvas"),
         options
       );
-
-      const introParagraph = document.querySelector(".intro p");
-      let text = introParagraph.textContent;
-      text = text.replace(/\s\s+/g, " ");
-      const letters = text.split("");
-      //console.log(letters);
-      introParagraph.textContent = "";
-      startTyping();
-
-      async function startTyping() {
-        for (let i = 0; i <= letters.length - 1; i++) {
-          //introParagraph.textContent += letters[i];
-          await addLetter(letters[i]);
-        }
-      }
-      function addLetter(letter) {
-        return new Promise(async (resolve) => {
-          setTimeout(() => {
-            introParagraph.textContent += letter;
-            //console.log(letter);
-            resolve();
-          }, 20);
-        });
-      }
     </script>
 
     <script>
@@ -378,6 +371,6 @@
     </script>
 
     <script src="js/menu.js"></script>
-    <script src="js/observers/avantages.js"></script>
+    <script src="js/observers/commerciale.js"></script>
   </body>
 </html>

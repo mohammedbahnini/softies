@@ -11,6 +11,7 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   position: relative;
+  color: rgb(87, 87, 87);
 }
 
 .container {
@@ -23,9 +24,28 @@ ul {
   list-style: none;
 }
 
+li {
+  line-height: 1.5;
+}
+
 a {
   color: white;
   text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.logo {
+  color: rgb(255, 165, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: italic;
+}
+.logo span {
+  color: rgb(96, 130, 202);
 }
 
 #particle-canvas {
@@ -36,6 +56,22 @@ a {
   top: 0;
   left: 0;
   z-index: -5;
+}
+#particle-canvas::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+@media screen and (max-width: 48rem) {
+  #particle-canvas > div {
+    background-size: cover !important;
+  }
 }
 
 header {
@@ -77,16 +113,6 @@ nav {
       -ms-flex-positive: 0;
           flex-grow: 0;
   padding: 1rem 0;
-}
-nav .logo {
-  color: rgb(255, 165, 0);
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: "Josefin Sans", sans-serif;
-  font-style: italic;
-}
-nav .logo span {
-  color: rgb(58, 91, 160);
 }
 nav ul {
   display: -webkit-box;
@@ -604,24 +630,17 @@ footer .footer-content .info {
           flex: 2;
 }
 footer .footer-content .info .logo {
-  color: rgb(255, 165, 0);
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Josefin Sans", sans-serif;
-  font-style: italic;
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
   margin-right: 1rem;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 @media screen and (max-width: 48rem) {
   footer .footer-content .info .logo {
     margin-bottom: 0.5rem;
   }
-}
-footer .footer-content .info .logo span {
-  color: rgb(58, 91, 160);
 }
 footer .footer-content .info p {
   letter-spacing: 0.5px;
